@@ -6,6 +6,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "ioredis": "^5.2.4",
     "pdf-export-images": "^1.0.9",
     "pdfreader": "^3.0.0"

@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 import Redis from 'ioredis';
 import { exportImages } from 'pdf-export-images';
 
@@ -49,9 +51,9 @@ if (!exit) {
 		let index = 0,
 			asyncIndex = 0;
 
-		exportImages(filePath, process.env.APP_ROOT_PATH)
-			.then((images) => {
-				console.log('images3333333333', images);
+		exportImages(filePath, `${process.env.APP_ROOT_PATH}/${id}`)
+			.then(images => {
+				console.log('00000000000000000', images);
 
 				process.exit();
 			})
