@@ -1,7 +1,8 @@
-require('dotenv').config();
-
+import { config } from 'dotenv';
 import Redis from 'ioredis';
 import { exportImages } from 'pdf-export-images';
+
+config();
 
 const id = process.argv[2];
 const filePath = process.argv[3];
