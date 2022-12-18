@@ -1,0 +1,13 @@
+{
+  "name": "pdf-utils",
+  "version": "1.0.0",
+  "description": "Reading pdf file in queue and save results to radis.",
+  "author": "ihor-bielchenko",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "ioredis": "^5.2.4",
+    "pdf-export-images": "^1.0.9",
+    "pdfreader": "^3.0.0"
+  }
+}
