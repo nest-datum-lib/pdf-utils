@@ -49,10 +49,7 @@ if (!exit) {
 		let index = 0,
 			asyncIndex = 0;
 
-		console.log('filePath11111111111111', filePath);
-		console.log('new folder22222222222', `${process.env.APP_ROOT_PATH}/${id}`);
-
-		exportImages(filePath, `${process.env.APP_ROOT_PATH}/${id}`)
+		exportImages(filePath, process.env.APP_ROOT_PATH)
 			.then((images) => {
 				console.log('images3333333333', images);
 
