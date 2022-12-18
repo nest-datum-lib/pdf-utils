@@ -53,9 +53,13 @@ if (!exit) {
 			asyncIndex = 0;
 
 		exportImages(filePath, process.env.APP_ROOT_PATH)
-			.then(images => {
-				console.log('00000000000000000', images);
+			.then(async (images) => {
+				let i = 0;
 
+				while (i < images.length) {
+					await redis.lpush(`${id}|images`, JSON.stringify(images[i]));
+					i++;
+				}
 				process.exit();
 			})
 			.catch((err) => {
